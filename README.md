@@ -1,2 +1,1 @@
-# CeluLoL
-PAM - Projeto de aplicativo sobre LoL.
+# Dupla: Pedro e Sthephany - 2DS
