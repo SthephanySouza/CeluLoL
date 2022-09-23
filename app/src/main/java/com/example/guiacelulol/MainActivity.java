@@ -20,6 +20,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        setContentView(permissao());
     }
 
     public void abrirGuia(View view){
@@ -45,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(mapIntent);
     }
 
-    public void permissão(View view){
+    public void permissao(View view){
         if(ActivityCompat.checkSelfPermission(
                 this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
                 &&
@@ -59,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         LocationManager locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
-        LocationListener locationListener= new Localizacao();
+        LocationListener locationListener = new Localizacao();
         locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, locationListener);
     }
 }
