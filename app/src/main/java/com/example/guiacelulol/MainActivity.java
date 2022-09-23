@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        setContentView(permissao());
+        permissao();
     }
 
     public void abrirGuia(View view){
@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(mapIntent);
     }
 
-    public void permissao(View view){
+    public void permissao(){
         if(ActivityCompat.checkSelfPermission(
                 this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
                 &&
