@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         LocationManager locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
-        LocationListener locationListener = new Localizacao();
+        LocationListener locationListener= new Localizacao();
         locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, locationListener);
     }
 }

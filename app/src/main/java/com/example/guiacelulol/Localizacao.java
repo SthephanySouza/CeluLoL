@@ -6,10 +6,11 @@ import android.location.LocationListener;
 public class Localizacao implements LocationListener {
 
     public static double latitude;
-    public static double longitude;
+    public static double longetude;
+
     @Override
     public void onLocationChanged(Location location) {
-        latitude  = location.getLatitude();
-        longitude = location.getLongitude();
+        latitude = location.getLatitude();
+        longetude = location.getLongitude();
     }
 }

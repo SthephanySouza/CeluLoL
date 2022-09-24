@@ -9,11 +9,6 @@ import android.view.View;
 
 public class Sensor extends AppCompatActivity {
 
-    public void Voltar(View view){
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-    }
-
     private Accelerometer accelerometer;
 
     @Override
@@ -23,7 +18,7 @@ public class Sensor extends AppCompatActivity {
 
         accelerometer = new Accelerometer(this);
 
-        accelerometer.setListener(new Accelerometer.Listener() {
+        accelerometer.setListener(new Accelerometer.Listener(){
             @Override
             public void onTranslation(float tx, float ty, float tz) {
                 if(tx > 1.0f){
